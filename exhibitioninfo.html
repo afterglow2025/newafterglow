@@ -130,36 +130,42 @@
         </ul>
     </div>
     <script>
+    window.onload = function() {
+      // 마루아트센터 지도
       var mapContainer = document.getElementById('map');
-      var mapOption = {
-        center: new kakao.maps.LatLng(37.574541, 126.985773), // 마루아트센터 좌표
-        level: 3
-      };
-      var map = new kakao.maps.Map(mapContainer, mapOption);
-      var marker = new kakao.maps.Marker({
-        position: new kakao.maps.LatLng(37.574541, 126.985773),
-        map: map
-      });
-      var infowindow = new kakao.maps.InfoWindow({
-        content: '<div style="padding:5px;">마루아트센터</div>'
-      });
-      infowindow.open(map, marker);
-
-      // 주차장 지도
+      if (mapContainer) {
+        var mapOption = {
+          center: new kakao.maps.LatLng(37.574541, 126.985773),
+          level: 3
+        };
+        var map = new kakao.maps.Map(mapContainer, mapOption);
+        var marker = new kakao.maps.Marker({
+          position: new kakao.maps.LatLng(37.574541, 126.985773),
+          map: map
+        });
+        var infowindow = new kakao.maps.InfoWindow({
+          content: '<div style="padding:5px;">마루아트센터</div>'
+        });
+        infowindow.open(map, marker);
+      }
+      // 센트로폴리스빌딩 주차장 지도
       var parkingMapContainer = document.getElementById('parking-map');
-      var parkingMapOption = {
-        center: new kakao.maps.LatLng(37.570377, 126.983021), // 센트로폴리스빌딩 좌표
-        level: 3
-      };
-      var parkingMap = new kakao.maps.Map(parkingMapContainer, parkingMapOption);
-      var parkingMarker = new kakao.maps.Marker({
-        position: new kakao.maps.LatLng(37.570377, 126.983021),
-        map: parkingMap
-      });
-      var parkingInfowindow = new kakao.maps.InfoWindow({
-        content: '<div style="padding:5px;">센트로폴리스빌딩 주차장</div>'
-      });
-      parkingInfowindow.open(parkingMap, parkingMarker);
+      if (parkingMapContainer) {
+        var parkingMapOption = {
+          center: new kakao.maps.LatLng(37.570377, 126.983021),
+          level: 3
+        };
+        var parkingMap = new kakao.maps.Map(parkingMapContainer, parkingMapOption);
+        var parkingMarker = new kakao.maps.Marker({
+          position: new kakao.maps.LatLng(37.570377, 126.983021),
+          map: parkingMap
+        });
+        var parkingInfowindow = new kakao.maps.InfoWindow({
+          content: '<div style="padding:5px;">센트로폴리스빌딩 주차장</div>'
+        });
+        parkingInfowindow.open(parkingMap, parkingMarker);
+      }
+    };
     </script>
 </body>
 </html> 
