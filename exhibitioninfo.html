@@ -104,6 +104,20 @@
             <span></span>
         </div>
     </header>
+    <div class="menu-bg" id="menuBg"></div>
+    <div class="menu-overlay" id="menuOverlay">
+        <button class="menu-close" id="menuCloseBtn">&times;</button>
+        <nav class="menu-list">
+            <a href="index.html" class="bold-divider">HOME</a>
+            <a href="gamepage.html">GAME</a>
+            <a href="mediaartpage.html">MEDIA ART</a>
+            <a href="servicepage.html" class="bold-divider">SERVICE</a>
+            <a href="authorpage.html">작가</a>
+            <a href="curatorpage.html" class="bold-divider">큐레이터</a>
+            <a href="exhibitioninfo.html" class="bold-divider">전시 정보</a>
+            <a href="catalog.html">카탈로그</a>
+        </nav>
+    </div>
     <main>
         <div class="visit-title">VISIT</div>
         <div class="visit-info">
@@ -131,6 +145,30 @@
     </div>
     <script>
     window.onload = function() {
+      // 햄버거 메뉴 토글 기능
+      const hamburgerBtn = document.getElementById('hamburgerBtn');
+      const menuOverlay = document.getElementById('menuOverlay');
+      const menuBg = document.getElementById('menuBg');
+      const menuCloseBtn = document.getElementById('menuCloseBtn');
+
+      hamburgerBtn.addEventListener('click', () => {
+        menuOverlay.classList.add('active');
+        menuBg.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      });
+
+      menuCloseBtn.addEventListener('click', () => {
+        menuOverlay.classList.remove('active');
+        menuBg.classList.remove('active');
+        document.body.style.overflow = '';
+      });
+
+      menuBg.addEventListener('click', () => {
+        menuOverlay.classList.remove('active');
+        menuBg.classList.remove('active');
+        document.body.style.overflow = '';
+      });
+
       // 마루아트센터 지도
       var mapContainer = document.getElementById('map');
       if (mapContainer) {
