@@ -3,11 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>?��?��?���? - 졸업?��?��</title>
+    <title>VISIT</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/exhibition.css">
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=8656c556d1bfed5dd0b1d36dc8a2012b"></script>
+    <style>
+        .visit-title {
+            text-align: center;
+            font-size: 3rem;
+            font-family: 'Noto Serif KR', serif;
+            margin-top: 98px;
+            margin-bottom: 32px;
+            letter-spacing: 0.1em;
+        }
+        .visit-info {
+            max-width: 900px;
+            margin: 0 auto 24px auto;
+            font-size: 1.1rem;
+        }
+        .visit-info-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            flex-wrap: wrap;
+            margin-bottom: 16px;
+        }
+        .visit-info-label {
+            font-weight: bold;
+        }
+        #map {
+            width: 100%;
+            max-width: 900px;
+            height: 300px;
+            background: #ddd;
+            margin: 0 auto 100px auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .parking-info {
+            max-width: 1100px;
+            margin: 0 auto 0 auto;
+            padding: 0 0 40px 0;
+        }
+        .parking-info-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            flex-wrap: wrap;
+            margin-bottom: 16px;
+        }
+        .parking-info-label {
+            font-weight: bold;
+        }
+        .parking-map-box {
+            width: 100%;
+            max-width: 1100px;
+            height: 300px;
+            background: #ddd;
+            margin: 0 auto 40px auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: #222;
+            font-weight: 600;
+            padding: 0;
+        }
+        .parking-guide-title {
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin: 40px 0 12px 0;
+        }
+        .parking-guide-list {
+            font-size: 1rem;
+            margin: 0 0 0 0;
+            padding-left: 0;
+        }
+        .parking-guide-list li {
+            margin-bottom: 4px;
+            list-style: none;
+        }
+        @media (max-width: 600px) {
+            .visit-title { font-size: 2rem; }
+            #map { height: 180px; margin-bottom: 60px; }
+            .visit-info { font-size: 1rem; }
+            .visit-info-row { flex-direction: column; align-items: flex-start; }
+            .parking-map-box { height: 120px; font-size: 1.1rem; }
+            .parking-info { font-size: 0.95rem; }
+        }
+    </style>
 </head>
-<body>
+<body style="background:#fff; color:#111;">
     <header>
         <div class="logo">
             <a href="index.html"><img src="images/logo_white.webp" alt="AFG Logo"></a>
@@ -18,37 +104,62 @@
             <span></span>
         </div>
     </header>
-    <div class="menu-bg" id="menuBg"></div>
-    <div class="menu-overlay" id="menuOverlay">
-        <button class="menu-close" id="menuCloseBtn">&times;</button>
-        <nav class="menu-list">
-            <a href="index.html" class="bold-divider">HOME</a>
-            <a href="gamepage.html">GAME</a>
-            <a href="mediaartpage.html">MEDIA ART</a>
-            <a href="servicepage.html" class="bold-divider">SERVICE</a>
-            <a href="authorpage.html">?���?</a>
-            <a href="curatorpage.html" class="bold-divider">?��?��?��?��</a>
-            <a href="exhibitioninfo.html" class="bold-divider">?��?�� ?���?</a>
-            <a href="catalog.html">?��?���?</a>
-        </nav>
-    </div>
-
     <main>
-        <!-- ?��?��??? ?��중에 추�?? -->
-    </main>
-
-    <footer>
-        <div class="footer-inner">
-            <div class="footer-left">
-                <!-- 로고 ?��거됨 -->
-            </div>
-            <div class="footer-right">
-                CONTACT | afterglow2025@gmail.com
+        <div class="visit-title">VISIT</div>
+        <div class="visit-info">
+            <div style="margin-bottom:12px;">관람시간: 10:00 - 17:00</div>
+            <div class="visit-info-row">
+                <div><span class="visit-info-label">전시장 위치: 마루아트센터</span></div>
+                <div>서울 종로구 인사동길 35-6 마루아트센터, 신관 B1, 특별관</div>
             </div>
         </div>
-    </footer>
+        <div id="map"></div>
+    </main>
+    <div class="parking-info">
+        <div class="parking-info-row">
+            <div><span class="parking-info-label">주차장 위치: 센트로폴리스빌딩 주차장</span></div>
+            <div>서울 종로구 우정국로 26</div>
+        </div>
+        <div class="parking-map-box" id="parking-map"></div>
+        <div class="parking-guide-title">주차권 안내</div>
+        <ul class="parking-guide-list">
+            <li>※ 주차권은 전시 진행 작가분께서 신청이 가능합니다.</li>
+            <li>※ 사전에 주차권을 신청하신 작가분들에 한해 사용 가능합니다.</li>
+            <li>※ 지정 시간 초과 시, 초과된 시간만큼의 추가 요금을 개별 정산하셔야 합니다.</li>
+            <li>※ 당일 현장에서는 별도의 주차권 제공이 없으므로, 미신청 시 전액 본인 부담입니다.</li>
+        </ul>
+    </div>
+    <script>
+      var mapContainer = document.getElementById('map');
+      var mapOption = {
+        center: new kakao.maps.LatLng(37.574541, 126.985773), // 마루아트센터 좌표
+        level: 3
+      };
+      var map = new kakao.maps.Map(mapContainer, mapOption);
+      var marker = new kakao.maps.Marker({
+        position: new kakao.maps.LatLng(37.574541, 126.985773),
+        map: map
+      });
+      var infowindow = new kakao.maps.InfoWindow({
+        content: '<div style="padding:5px;">마루아트센터</div>'
+      });
+      infowindow.open(map, marker);
 
-    <script src="js/main.js"></script>
-    <script src="js/exhibition.js"></script>
+      // 주차장 지도
+      var parkingMapContainer = document.getElementById('parking-map');
+      var parkingMapOption = {
+        center: new kakao.maps.LatLng(37.570377, 126.983021), // 센트로폴리스빌딩 좌표
+        level: 3
+      };
+      var parkingMap = new kakao.maps.Map(parkingMapContainer, parkingMapOption);
+      var parkingMarker = new kakao.maps.Marker({
+        position: new kakao.maps.LatLng(37.570377, 126.983021),
+        map: parkingMap
+      });
+      var parkingInfowindow = new kakao.maps.InfoWindow({
+        content: '<div style="padding:5px;">센트로폴리스빌딩 주차장</div>'
+      });
+      parkingInfowindow.open(parkingMap, parkingMarker);
+    </script>
 </body>
 </html> 
