@@ -871,11 +871,12 @@ footer {
     align-items: center;
     overflow-x: hidden;
     background: #111;
+    margin-top: 0px !important;
   }
   .bookmark-buttons {
     display: flex;
-    gap: 5px !important;
-    margin: 0px !important;
+    gap: 20px !important;
+    margin-top: 0px !important;
     flex-wrap: wrap;
     justify-content: center;
 }
@@ -905,5 +906,7 @@ footer {
   .catalog-view .catalog-page:nth-child(3) {
     display: none !important;
   }
-
+  .catalog-container {
+    margin-top: 30px !important;
+  }
 }
