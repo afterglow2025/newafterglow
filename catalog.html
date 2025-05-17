@@ -141,12 +141,37 @@
     </main>
     <script>
     document.addEventListener('DOMContentLoaded', function() {
-        document.getElementById('page1').onclick = function() {
-            console.log('이미지 클릭됨', isMobile(), currentPage);
-            if (isMobile() && currentPage < TOTAL_PAGES) {
-                goNext();
+        function handlePage1ClickOrTouch(x) {
+            if (!isMobile()) return;
+            const half = document.getElementById('page1').getBoundingClientRect().width / 2;
+            if (x > half) {
+                console.log('오른쪽 클릭됨');
+                if (currentPage < TOTAL_PAGES) goNext();
+            } else {
+                console.log('왼쪽 클릭됨');
+                if (currentPage > 1) goPrev();
             }
+        }
+        const page1 = document.getElementById('page1');
+        let touchFired = false;
+
+        // 마우스 클릭
+        page1.onclick = function(e) {
+            if (touchFired) {
+                touchFired = false; // 터치 후 발생한 클릭은 무시
+                return;
+            }
+            const rect = this.getBoundingClientRect();
+            handlePage1ClickOrTouch(e.clientX - rect.left);
         };
+        // 터치(모바일) 지원
+        page1.addEventListener('touchend', function(e) {
+            touchFired = true;
+            e.preventDefault();
+            e.stopPropagation();
+            const rect = this.getBoundingClientRect();
+            handlePage1ClickOrTouch(e.changedTouches[0].clientX - rect.left);
+        });
     });
     // 카탈로그 페이지 수
     const TOTAL_PAGES = 130;
@@ -247,23 +272,6 @@
     window.addEventListener('resize', updateCatalog);
     // 첫 페이지 렌더링
     updateCatalog();
-
-    // 모바일에서 .catalog-page.active 클릭 시 다음 페이지로 이동
-    // document.querySelector('.catalog-view').addEventListener('click', function(e) {
-    //     if (isMobile() && e.target.closest('.catalog-page.active')) {
-    //         if (currentPage < TOTAL_PAGES) {
-    //             goNext();
-    //         }
-    //     }
-    // });
-
-    // 모바일에서 #page1 이미지를 클릭하면 다음 페이지로 이동
-    document.getElementById('page1').onclick = function() {
-        console.log('이미지 클릭됨', isMobile(), currentPage);
-        if (isMobile() && currentPage < TOTAL_PAGES) {
-            goNext();
-        }
-    };
 
     let touchStartX = 0;
     let touchEndX = 0;

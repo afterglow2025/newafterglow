@@ -865,7 +865,7 @@ footer {
 @media (max-width: 900px) {
   .catalog-view {
     width: 100vw;
-    min-height: 100vh;
+    min-height: 80vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -877,6 +877,7 @@ footer {
     display: flex;
     gap: 20px !important;
     margin-top: 0px !important;
+    margin-bottom: 10px !important;
     flex-wrap: wrap;
     justify-content: center;
 }
@@ -884,13 +885,12 @@ footer {
     display: none;
     width: 100vw;
     max-width: 80vw; !important
-    height: auto;
-    min-height: 60vw;
+    height: 80vw;
     box-sizing: border-box;
     margin: 0 auto;
     padding: 0;
     background: #222;
-    border-radius: 0;
+    border-radius: 0 !important;
     box-shadow: none;
   }
   .catalog-page.active {
@@ -901,12 +901,13 @@ footer {
     height: auto;
     object-fit: contain;
     display: block;
-    border-radius: 0;
+    border-radius: 0 !important;
+    margin-bottom: 15px !important;
   }
   .catalog-view .catalog-page:nth-child(3) {
     display: none !important;
   }
   .catalog-container {
-    margin-top: 30px !important;
+    margin-top: 60px !important;
   }
 }
