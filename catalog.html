@@ -3,10 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>afg.afterglow</title>
+    <title>웹도록 | CATALOG</title>
     <link rel="icon" type="image/webp" href="images/favicon.webp">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/catalog.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <style>
+        body { 
+            background: #111; 
+            color: #fff; 
+            min-height: 100vh;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            font-family: 'Freesentation', sans-serif;
+        }
+        main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .catalog-container {
+            max-width: 1200px;
+            margin: 80px auto 0px auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex: 1;
+        }
+        .bookmark-buttons {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 24px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .bookmark-btn {
+            background: #222;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            padding: 8px 16px;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .bookmark-btn:hover {
+            background: #333;
+        }
+        .bookmark-btn:active {
+            background: #444;
+        }
+        .catalog-view {
+            display: flex;
+            gap: 32px;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+        .catalog-page {
+            background: #222;
+            border-radius: 8px;
+            box-shadow: 0 2px 16px rgba(0,0,0,0.15);
+            overflow: hidden;
+            width: 400px;
+            height: 566px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .catalog-page img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            background: #fff;
+        }
+        .catalog-btn {
+            background: #222;
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            font-size: 1.5rem;
+            cursor: pointer;
+            margin: 0;
+            transition: background 0.2s;
+        }
+        .catalog-btn:active {
+            background: #444;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -33,23 +120,113 @@
             <a href="catalog.html">카탈로그</a>
         </nav>
     </div>
-
     <main>
-        <!-- 내용 중에 추가 -->
-    </main>
-
-    <footer>
-        <div class="footer-inner">
-            <div class="footer-left">
-                <!-- 로고 제거됨 -->
+        <div class="catalog-container">
+            <div class="bookmark-buttons">
+                <button class="bookmark-btn" data-page="11">Game</button>
+                <button class="bookmark-btn" data-page="57">Media Art</button>
+                <button class="bookmark-btn" data-page="83">Service</button>
+                <button class="bookmark-btn" data-page="109">Snap Shot</button>
+                <button class="bookmark-btn" data-page="119">Profil</button>
             </div>
-            <div class="footer-right">
-                CONTACT | afterglow2025@gmail.com
+            <div class="catalog-view">
+                <button class="catalog-btn" id="prevBtn">&#8592;</button>
+                <div class="catalog-page"><img id="page1" src="" alt="catalog page 1"></div>
+                <div class="catalog-page"><img id="page2" src="" alt="catalog page 2"></div>
+                <button class="catalog-btn" id="nextBtn">&#8594;</button>
             </div>
         </div>
-    </footer>
+    </main>
+    <script>
+    // 카탈로그 페이지 수
+    const TOTAL_PAGES = 130;
+    let currentPage = 1;
 
-    <script src="js/main.js"></script>
-    <script src="js/catalog.js"></script>
+    // 햄버거 메뉴 관련 요소
+    const hamburgerBtn = document.getElementById('hamburgerBtn');
+    const menuOverlay = document.getElementById('menuOverlay');
+    const menuBg = document.getElementById('menuBg');
+    const menuCloseBtn = document.getElementById('menuCloseBtn');
+
+    // 햄버거 메뉴 열기
+    hamburgerBtn.addEventListener('click', () => {
+        menuOverlay.classList.add('active');
+        menuBg.classList.add('active');
+    });
+
+    // 햄버거 메뉴 닫기
+    menuCloseBtn.addEventListener('click', () => {
+        menuOverlay.classList.remove('active');
+        menuBg.classList.remove('active');
+    });
+
+    // 배경 클릭시 메뉴 닫기
+    menuBg.addEventListener('click', () => {
+        menuOverlay.classList.remove('active');
+        menuBg.classList.remove('active');
+    });
+
+    // 모바일 여부
+    function isMobile() {
+        return window.innerWidth < 700;
+    }
+    function updateCatalog() {
+        const page1 = document.getElementById('page1');
+        const page2 = document.getElementById('page2');
+        let left = currentPage;
+        let right = currentPage + 1;
+        if (isMobile()) {
+            page1.src = `images/catalog/catalog_${left}.webp`;
+            page2.style.display = 'none';
+            document.getElementById('pageInfo').innerText = `${left} / ${TOTAL_PAGES}`;
+        } else {
+            page1.src = `images/catalog/catalog_${left}.webp`;
+            if (right <= TOTAL_PAGES) {
+                page2.src = `images/catalog/catalog_${right}.webp`;
+                page2.style.display = '';
+                document.getElementById('pageInfo').innerText = `${left} - ${right} / ${TOTAL_PAGES}`;
+            } else {
+                page2.src = '';
+                page2.style.display = 'none';
+                document.getElementById('pageInfo').innerText = `${left} / ${TOTAL_PAGES}`;
+            }
+        }
+    }
+    function goToPage(page) {
+        if (isMobile()) {
+            currentPage = page;
+        } else {
+            currentPage = page % 2 === 0 ? page - 1 : page;
+        }
+        updateCatalog();
+    }
+    function goPrev() {
+        if (isMobile()) {
+            if (currentPage > 1) currentPage--;
+        } else {
+            if (currentPage > 2) currentPage -= 2;
+            else currentPage = 1;
+        }
+        updateCatalog();
+    }
+    function goNext() {
+        if (isMobile()) {
+            if (currentPage < TOTAL_PAGES) currentPage++;
+        } else {
+            if (currentPage + 2 <= TOTAL_PAGES) currentPage += 2;
+            else if (currentPage + 1 <= TOTAL_PAGES) currentPage++;
+        }
+        updateCatalog();
+    }
+    document.getElementById('prevBtn').onclick = goPrev;
+    document.getElementById('nextBtn').onclick = goNext;
+    // 책갈피 버튼 이벤트 리스너 추가
+    document.querySelectorAll('.bookmark-btn').forEach(btn => {
+        btn.onclick = () => goToPage(parseInt(btn.dataset.page));
+    });
+    window.addEventListener('resize', updateCatalog);
+    // 첫 페이지 렌더링
+    updateCatalog();
+    </script>
 </body>
 </html> 

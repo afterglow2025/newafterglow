@@ -16,10 +16,14 @@ document.addEventListener('DOMContentLoaded', function () {
         let offset;
         if (idx === 0) {
             offset = 0;
-            track.style.paddingLeft = "120px";  // ? 첫 슬라이드만 패딩 추가
+            if (window.innerWidth > 900) {
+                track.style.paddingLeft = "120px";
+            } else {
+                track.style.paddingLeft = "0px";
+            }
         } else {
             offset = totalWidth * idx - (sliderWidth - totalWidth) / 2;
-            track.style.paddingLeft = "0px";   // ? 나머지는 패딩 제거
+            track.style.paddingLeft = "0px";
         }
 
         console.log(`goToSlide(${idx})`);

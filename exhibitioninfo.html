@@ -11,13 +11,13 @@
             text-align: center;
             font-size: 3rem;
             font-family: 'Noto Serif KR', serif;
-            margin-top: 98px;
+            margin-top: 150px;
             margin-bottom: 32px;
             letter-spacing: 0.1em;
         }
         .visit-info {
             max-width: 900px;
-            margin: 0 auto 24px auto;
+            margin: 100px auto 24px auto;
             font-size: 1.1rem;
         }
         .visit-info-row {
@@ -33,7 +33,7 @@
         #map {
             width: 100%;
             max-width: 900px;
-            height: 300px;
+            height: 450px;
             background: #ddd;
             margin: 0 auto 100px auto;
             display: flex;
@@ -41,7 +41,7 @@
             justify-content: center;
         }
         .parking-info {
-            max-width: 1100px;
+            max-width: 900px;
             margin: 0 auto 0 auto;
             padding: 0 0 40px 0;
         }
@@ -57,10 +57,10 @@
         }
         .parking-map-box {
             width: 100%;
-            max-width: 1100px;
-            height: 300px;
+            max-width: 900px;
+            height: 450px;
             background: #ddd;
-            margin: 0 auto 40px auto;
+            margin: 0 auto 50px auto;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -85,10 +85,10 @@
         }
         @media (max-width: 600px) {
             .visit-title { font-size: 2rem; }
-            #map { height: 180px; margin-bottom: 60px; }
+            #map { height: 270px; margin-bottom: 60px; }
             .visit-info { font-size: 1rem; }
             .visit-info-row { flex-direction: column; align-items: flex-start; }
-            .parking-map-box { height: 120px; font-size: 1.1rem; }
+            .parking-map-box { height: 270px; font-size: 1.1rem; }
             .parking-info { font-size: 0.95rem; }
         }
     </style>
@@ -142,6 +142,24 @@
             <li>※ 지정 시간 초과 시, 초과된 시간만큼의 추가 요금을 개별 정산하셔야 합니다.</li>
             <li>※ 당일 현장에서는 별도의 주차권 제공이 없으므로, 미신청 시 전액 본인 부담입니다.</li>
         </ul>
+        <div style="margin-bottom:100px;"></div>
+        <hr style="border:0; border-top:2px solid #ddd; width:900px; margin:0 auto 100px auto;">
+    </div>
+    <div class="sponsor-section" style="max-width:1200px; margin:0 auto 0 auto; text-align:center;">
+        <div style="display:flex; justify-content:center; align-items:flex-end; gap:120px; margin-bottom:60px; flex-wrap:wrap;">
+            <div>
+                <div style="font-size:1.2rem; margin-bottom:10px;">주최</div>
+                <img src="images/globalmedialogo.webp" alt="주최" style="height:80px;">
+            </div>
+            <div>
+                <div style="font-size:1.2rem; margin-bottom:10px;">주관</div>
+                <img src="images/sswlogo.webp" alt="주관" style="height:80px;">
+            </div>
+        </div>
+        <div style="font-size:1.3rem; margin-bottom:40px;">SPONSOR</div>
+        <div style="display:flex; justify-content:center; align-items:center; gap:60px; flex-wrap:wrap; margin-bottom:100px;">
+            <img src="images/sponsor.webp" alt="sponsor" style="height:60px;">
+        </div>
     </div>
     <script>
     window.onload = function() {
@@ -206,4 +224,14 @@
     };
     </script>
 </body>
+<footer>
+    <div class="footer-inner">
+        <div class="footer-left">
+            <!-- 로고 제거됨 -->
+        </div>
+        <div class="footer-right">
+            CONTACT | afterglow2025@gmail.com
+        </div>
+    </div>
+</footer>
 </html> 
