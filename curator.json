@@ -3,37 +3,37 @@
     "name": "이경모",
     "position": "팀장",
     "email": "이메일",
-    "image": "images/curatorImage/mo.png"
+    "image": "./images/curatorImage/mo.png"
   },
   {
     "name": "김륜아",
     "position": "기자재",
     "email": "이메일",
-    "image": "images/curatorImage/reun.png"
+    "image": "./images/curatorImage/reun.png"
   },
   {
     "name": "김한슬",
     "position": "아트",
     "email": "이메일",
-    "image": "images/curatorImage/han.png"
+    "image": "./images/curatorImage/han.png"
   },
   {
     "name": "명은서",
     "position": "AD",
     "email": "이메일",
-    "image": "images/curatorImage/eunn.png"
+    "image": "./images/curatorImage/eunn.png"
   },
   {
     "name": "김현서",
     "position": "AD",
     "email": "이메일",
-    "image": "images/curatorImage/heaun.png"
+    "image": "./images/curatorImage/heaun.png"
   },
   {
     "name": "신경섭",
     "position": "회계",
     "email": "이메일",
-    "image": "images/curatorImage/sin.png"
+    "image": "./images/curatorImage/sin.png"
   }
 ]
 
