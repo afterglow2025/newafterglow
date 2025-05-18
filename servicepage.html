@@ -39,12 +39,12 @@
             <div class="laptop-inner">
                 <div class="game-slide-slider">
                     <div class="game-slide-track">
-                        <div class="game-slide"><img src="images/service_1.webp" alt="service1"></div>
-                        <div class="game-slide"><img src="images/service_2.webp" alt="service2"></div>
-                        <div class="game-slide"><img src="images/service_3.webp" alt="service3"></div>
-                        <div class="game-slide"><img src="images/service_4.webp" alt="service4"></div>
-                        <div class="game-slide"><img src="images/service_5.webp" alt="service5"></div>
-                        <div class="game-slide"><img src="images/service_6.webp" alt="service6"></div>
+                        <div class="game-slide" data-game="La Plata"><img src="images/service_1.webp" alt="service1"></div>
+                        <div class="game-slide" data-game="단무지"><img src="images/service_2.webp" alt="service2"></div>
+                        <div class="game-slide" data-game="미라클러닝"><img src="images/service_3.webp" alt="service3"></div>
+                        <div class="game-slide" data-game="oummt"><img src="images/service_4.webp" alt="service4"></div>
+                        <div class="game-slide" data-game="이진수"><img src="images/service_5.webp" alt="service5"></div>
+                        <div class="game-slide" data-game="이코노미 클래스"><img src="images/service_6.webp" alt="service6"></div>
                     </div>
                     <div class="game-slide-indicators">
                         <div class="game-slide-indicator active"></div>
@@ -62,48 +62,49 @@
                 </div>
                 <div class="service-lineup">
                     <h2>Line Up</h2>
+                    <h5>이미지를 클릭하면, 개인페이지로 넘어갑니다</h5>
                 </div>
                 <div class="game-grid">
                     <div class="game-thumb">
-                        <a href="https://www.naver.com/">
+                        <a href="https://danmuzi-landing-page-k7x1.vercel.app/">
                             <img src="images/service1.webp" alt="service1">
                             <img src="images/profil/service1.webp" alt="service1-hover" class="hover-img">
-                            <div class="game-thumb-label"><span>service1</span><br><span>팀1</span></div>
+                            <div class="game-thumb-label"><span>단무지</span><br><span>변우진 김혜령 심재환</span></div>
                         </a>
                     </div>
                     <div class="game-thumb">
-                        <a href="https://www.naver.com/">
+                        <a href="https://wooyxxng-jang.github.io/gomeet-web/">
                             <img src="images/service2.webp" alt="service2">
                             <img src="images/profil/service2.webp" alt="service2-hover" class="hover-img">
-                            <div class="game-thumb-label"><span>service2</span><br><span>팀2</span></div>
+                            <div class="game-thumb-label"><span>미라클러닝</span><br><span>김하빈 임가은 장우영</span></div>
                         </a>
                     </div>
                     <div class="game-thumb">
-                        <a href="https://www.naver.com/">
+                        <a href="https://www.oummt.site">
                             <img src="images/service3.webp" alt="service3">
                             <img src="images/profil/service3.webp" alt="service3-hover" class="hover-img">
-                            <div class="game-thumb-label"><span>service3</span><br><span>팀3</span></div>
+                            <div class="game-thumb-label"><span>oummt</span><br><span>박희선 이다연 이윤지</span></div>
                         </a>
                     </div>
                     <div class="game-thumb">
-                        <a href="https://www.naver.com/">
+                        <a href="https://www.bronze-mirror.site/landing">
                             <img src="images/service4.webp" alt="service4">
                             <img src="images/profil/service4.webp" alt="service4-hover" class="hover-img">
-                            <div class="game-thumb-label"><span>service4</span><br><span>팀4</span></div>
+                            <div class="game-thumb-label"><span>이코노미 클래스</span><br><span>박가을 문세종 한석휘</span></div>
                         </a>
                     </div>
                     <div class="game-thumb">
-                        <a href="https://www.naver.com/">
+                        <a href="https://songchaeeunn.github.io/Laplata.github.io/">
                             <img src="images/service5.webp" alt="service5">
                             <img src="images/profil/service5.webp" alt="service5-hover" class="hover-img">
-                            <div class="game-thumb-label"><span>service5</span><br><span>팀5</span></div>
+                            <div class="game-thumb-label"><span>La Plata</span><br><span>송채은 양예은</span></div>
                         </a>
                     </div>
                     <div class="game-thumb">
-                        <a href="https://www.naver.com/">
+                        <a href="https://jinsoru1464.github.io/LeeJinSoo.github.io/">
                             <img src="images/service6.webp" alt="service6">
                             <img src="images/profil/service6.webp" alt="service6-hover" class="hover-img">
-                            <div class="game-thumb-label"><span>service6</span><br><span>팀6</span></div>
+                            <div class="game-thumb-label"><span>이진수</span><br><span>박진우 엄연수 이진솔</span></div>
                         </a>
                     </div>
                 </div>
@@ -149,6 +150,17 @@
                     }
                 });
             }
+        });
+
+        // 슬라이드 클릭 이벤트 추가
+        document.querySelectorAll('.game-slide').forEach(slide => {
+            slide.addEventListener('click', function() {
+                const gameName = this.getAttribute('data-game');
+                const targetThumb = Array.from(document.querySelectorAll('.game-thumb-label span:first-child')).find(span => span.textContent.trim() === gameName)?.closest('.game-thumb');
+                if (targetThumb) {
+                    targetThumb.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
         });
     </script>
 </body>

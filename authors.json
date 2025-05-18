@@ -3,391 +3,397 @@
     "name": "강희룡",
     "position": "개발",
     "email": "drakang4@gmail.com",
-    "image": "images/authorImage/kanghirrong.png"
+    "image": "images/authorImage/kanghirrong.webp"
   },
   {
     "name": "곽윤희",
     "position": "디자인, 기획",
     "email": "angela733@naver.com",
-    "image": "images/authorImage/kwakyeonhee.png"
+    "image": "images/authorImage/kwakyeonhee.webp"
   },
   {
-    "name": "김경현",
+    "name": "권경현",
     "position": "개발",
     "email": "harry3449@gmail.com",
-    "image": "images/authorImage/kwangkyunghyun.png"
+    "image": "images/authorImage/kwangkyunghyun.webp"
+  },
+  {
+    "name":"권현수",
+    "position":"개발",
+    "email":"kkhhss4035@gmail.com",
+    "image": "images/authorImage/kwonhyunsoo.webp"
   },
   {
     "name": "김민지",
     "position": "개발, 기획, 디자인",
     "email": "mm.diii1789@gmail.com",
-    "image": "images/authorImage/kimminji.png"
+    "image": "images/authorImage/kimminji.webp"
   },
   {
-    "name": "김병진",
+    "name": "김재형",
     "position": "디자인",
     "email": "kjh3448723@naver.com",
-    "image": "images/authorImage/kimjaheung.png"
+    "image": "images/authorImage/kimjaheung.webp"
   },
   {
     "name": "김예빈",
     "position": "기획",
     "email": "luna.kimyb@gmail.com",
-    "image": "images/authorImage/kimyeabin.png"
+    "image": "images/authorImage/kimyeabin.webp"
   },
   {
     "name": "김예린",
     "position": "디자인",
     "email": "zhska4869@naver.com",
-    "image": "images/authorImage/kimyearin.png"
+    "image": "images/authorImage/kimyearin.webp"
   },
   {
     "name": "김지석",
     "position": "아트, 기획",
     "email": "busknight57@gmail.com",
-    "image": "images/authorImage/kimjisuek.png"
+    "image": "images/authorImage/kimjisuek.webp"
   },
   {
     "name": "김지은",
     "position": "개발",
     "email": "duji1207@gmail.com",
-    "image": "images/authorImage/kimjiun.png"
+    "image": "images/authorImage/kimjiun.webp"
   },
   {
     "name": "김하빈",
     "position": "개발",
     "email": "habin81111@naver.com",
-    "image": "images/authorImage/kimhabin.png"
+    "image": "images/authorImage/kimhabin.webp"
   },
   {
     "name": "김하연",
     "position": "Art Director",
     "email": "hayeon525@soongsil.ac.kr",
-    "image": "images/authorImage/kimhayeon.png"
+    "image": "images/authorImage/kimhayeon.webp"
   },
   {
     "name": "김혜령",
     "position": "백엔드, 디자인",
     "email": "hyeryoung27@gmail.com",
-    "image": "images/authorImage/kimheryeong.png"
+    "image": "images/authorImage/kimheryeong.webp"
   },
   {
     "name": "김희준",
     "position": "개발, 기획",
     "email": "illinass.dev@gmail.com",
-    "image": "images/authorImage/kimhejune.png"
-  },
-  {
-    "name": "남우영",
-    "position": "기획",
-    "email": "wooyxxng@gmail.com",
-    "image": "images/authorImage/janguyeong.png"
+    "image": "images/authorImage/kimhejune.webp"
   },
   {
     "name": "문세종",
     "position": "기획, 프론트엔드 개발",
     "email": "jongse@soongsil.ac.kr",
-    "image": "images/authorImage/moonseagong.png"
+    "image": "images/authorImage/moonseagong.webp"
   },
   {
     "name": "문혜정",
     "position": "개발, 기획, 디자인",
     "email": "mhj2522@naver.com",
-    "image": "images/authorImage/moonhyejeong.png"
+    "image": "images/authorImage/moonhyejeong.webp"
   },
   {
     "name": "박가을",
     "position": "디자인",
     "email": "gaeul703@gmail.com",
-    "image": "images/authorImage/parkgaull.png"
+    "image": "images/authorImage/parkgaull.webp"
   },
   {
     "name": "박민혁",
     "position": "개발",
     "email": "minhyeokpark01@gmail.com",
-    "image": "images/authorImage/parkminhung.png"
+    "image": "images/authorImage/parkminhung.webp"
   },
   {
     "name": "박승민",
     "position": "개발, 디자인",
     "email": "ligers9999@gmail.com",
-    "image": "images/authorImage/parkssungmin.png"
+    "image": "images/authorImage/parkssungmin.webp"
   },
   {
     "name": "박예린",
     "position": "개발",
     "email": "gamjoa2002@naver.com",
-    "image": "images/authorImage/parkyearin.png"
+    "image": "images/authorImage/parkyearin.webp"
   },
   {
     "name": "박지우",
     "position": "아트",
     "email": "cather0327@naver.com",
-    "image": "images/authorImage/parkgiuu.png"
+    "image": "images/authorImage/parkgiuu.webp"
   },
   {
     "name": "박진우",
     "position": "기획 총괄, 프론트엔드 개발",
     "email": "java0214@naver.com",
-    "image": "images/authorImage/parkjinouu.png"
+    "image": "images/authorImage/parkjinouu.webp"
   },
   {
     "name": "박희선",
     "position": "기획",
     "email": "hee1004sun@naver.com",
-    "image": "images/authorImage/parkheesun.png"
+    "image": "images/authorImage/parkheesun.webp"
   },
   {
     "name": "백선희",
-    "position": "게임 아트, 애니메이션 캐릭터 아트",
+    "position": "게임/애니메이션 캐릭터 아트",
     "email": "ava140102938@gmail.com",
-    "image": "images/authorImage/baeksunhee.png"
+    "image": "images/authorImage/baeksunhee.webp"
   },
   {
     "name": "배현",
     "position": "기획",
     "email": "qogus_@naver.com",
-    "image": "images/authorImage/baehyun.png"
+    "image": "images/authorImage/baehyun.webp"
   },
   {
     "name": "변우진",
     "position": "기획, 프론트엔드",
     "email": "byunwoojin21@gmail.com",
-    "image": "images/authorImage/byunwoojin.png"
+    "image": "images/authorImage/byunwoojin.webp"
+  },
+  {
+    "name":"서나진",
+    "position":"개발, 기획, 디자인",
+    "email":"tjskwls0804@naver.com",
+    "image": "images/authorImage/seonajin.webp"
   },
   {
     "name": "손우혁",
     "position": "게임 시나리오, 게임 및 애니메이션 기획, 개발",
     "email": "thsdngur99@naver.com",
-    "image": "images/authorImage/sonouuheak.png"
+    "image": "images/authorImage/sonouuheak.webp"
   },
   {
     "name": "송채은",
     "position": "기획, 디자인, 프론트엔드",
     "email": "",
-    "image": "images/authorImage/songchauun.png"
+    "image": "images/authorImage/songchauun.webp"
+  },
+  {
+    "name":"성준일",
+    "position":"기획, 개발",
+    "email":"intro2252@gmail.com",
+    "image": "images/authorImage/sougjunill.webp"
   },
   {
     "name": "신정민",
     "position": "3D 모델링, 애니메이팅, 스토리 기획",
     "email": "shhstg111@gmail.com",
-    "image": "images/authorImage/shinjeongmin.png"
+    "image": "images/authorImage/shinjeongmin.webp"
   },
   {
     "name": "신수연",
     "position": "Technical Director",
     "email": "sooy@soongsil.ac.kr",
-    "image": "images/authorImage/sinsuyoune.png"
+    "image": "images/authorImage/sinsuyoune.webp"
   },
   {
     "name": "심재환",
     "position": "기획, AI 백엔드",
     "email": "troyshim1@gmail.com",
-    "image": "images/authorImage/simjehwan.png"
+    "image": "images/authorImage/simjehwan.webp"
   },
   {
     "name": "양건주",
     "position": "개발",
     "email": "fine4200@naver.com",
-    "image": "images/authorImage/yanggunju.png"
+    "image": "images/authorImage/yanggunju.webp"
   },
   {
     "name": "양예은",
     "position": "기획, 백엔드",
     "email": "lady6102@naver.com",
-    "image": "images/authorImage/yangyeon.png"
+    "image": "images/authorImage/yangyeon.webp"
   },
   {
     "name": "엄연수",
     "position": "기획, 디자인",
     "email": "dja1dustn@naver.com",
-    "image": "images/authorImage/ummyounsuu.png"
+    "image": "images/authorImage/ummyounsuu.webp"
   },
   {
     "name": "오승희",
     "position": "기획",
     "email": "ggg08071s19@gmail.com",
-    "image": "images/authorImage/ohsunghi.png"
+    "image": "images/authorImage/ohsunghi.webp"
   },
   {
     "name": "옹가흔",
     "position": "기획",
     "email": "",
-    "image": "images/authorImage/uunggahong.png"
+    "image": "images/authorImage/uunggahong.webp"
   },
   {
     "name": "유소택",
     "position": "개발",
     "email": "1841746667@qq.com",
-    "image": "images/authorImage/yousothek.png"
+    "image": "images/authorImage/yousothek.webp"
   },
   {
     "name": "유윤상",
     "position": "기획",
     "email": "vipsang02@gmail.com",
-    "image": "images/authorImage/youyunsang.png"
-  },
-  {
-    "name": "이경현",
-    "position": "기획",
-    "email": "dali2728@gmail.com",
-    "image": "images/authorImage/hwangjungger.png"
+    "image": "images/authorImage/youyunsang.webp"
   },
   {
     "name": "이다연",
     "position": "디자인",
     "email": "01022325342a@gmail.com",
-    "image": "images/authorImage/leedayeon.png"
+    "image": "images/authorImage/leedayeon.webp"
   },
   {
     "name": "이동석",
     "position": "아트",
     "email": "dongseoklee26@gmail.com",
-    "image": "images/authorImage/leedongseak.png"
-  },
-  {
-    "name": "이문정",
-    "position": "디자인",
-    "email": "hayeon897@naver.com",
-    "image": "images/authorImage/janghayune.png"
+    "image": "images/authorImage/leedongseak.webp"
   },
   {
     "name": "이세진",
     "position": "3D 캐릭터 모델링, 텍스처, 렌더링",
     "email": "ylem0921@gmail.com",
-    "image": "images/authorImage/leesejin.png"
+    "image": "images/authorImage/leesejin.webp"
   },
   {
     "name": "이신후",
     "position": "기획",
     "email": "daniel19923@naver.com",
-    "image": "images/authorImage/leesinhu.png"
+    "image": "images/authorImage/leesinhu.webp"
   },
   {
     "name": "이연재",
     "position": "Technical Artist",
     "email": "prumy02@soongsil.ac.kr",
-    "image": "images/authorImage/leeyeonjae.png"
+    "image": "images/authorImage/leeyeonjae.webp"
   },
   {
     "name": "이윤지",
     "position": "개발",
     "email": "le2yunji@naver.com",
-    "image": "images/authorImage/leeyunji.png"
+    "image": "images/authorImage/leeyunji.webp"
   },
   {
     "name": "이진솔",
     "position": "기획, 백엔드 개발",
     "email": "jis1464@naver.com",
-    "image": "images/authorImage/leejinsole.png"
+    "image": "images/authorImage/leejinsole.webp"
   },
   {
     "name": "이준협",
     "position": "개발",
     "email": "david20209@naver.com",
-    "image": "images/authorImage/leejunhup.png"
+    "image": "images/authorImage/leejunhup.webp"
   },
   {
     "name": "이혜연",
     "position": "개발",
     "email": "lehy1124@naver.com",
-    "image": "images/authorImage/leeheayaun.png"
+    "image": "images/authorImage/leeheayaun.webp"
   },
   {
     "name": "임가은",
     "position": "디자인",
     "email": "sagu0217@gmail.com",
-    "image": "images/authorImage/imgaeun.png"
+    "image": "images/authorImage/imgaeun.webp"
   },
   {
     "name": "임나영",
     "position": "디자인",
     "email": "najoy0223@naver.com",
-    "image": "images/authorImage/immnayoung.png"
+    "image": "images/authorImage/immnayoung.webp"
   },
   {
     "name": "장우영",
     "position": "기획",
     "email": "wooyxxng@gmail.com",
-    "image": "images/authorImage/janguyeong.png"
+    "image": "images/authorImage/janguyeong.webp"
   },
   {
     "name": "장하연",
     "position": "디자인",
     "email": "hayeon897@naver.com",
-    "image": "images/authorImage/janghayune.png"
+    "image": "images/authorImage/janghayune.webp"
   },
   {
     "name": "정지원",
     "position": "개발, 디자인",
     "email": "wjdwldnjs427@naver.com",
-    "image": "images/authorImage/jungjione.png"
+    "image": "images/authorImage/jungjione.webp"
   },
   {
     "name": "정태영",
     "position": "일러스트, 캐릭터 디자인, 이펙트, 사운드",
     "email": "wjdxodud012@naver.com",
-    "image": "images/authorImage/jeongtaeyoung.png"
+    "image": "images/authorImage/jeongtaeyoung.webp"
   },
   {
     "name": "정현승",
     "position": "디자인",
     "email": "jhs5122@naver.com",
-    "image": "images/authorImage/junghyensung.png"
+    "image": "images/authorImage/junghyensung.webp"
   },
   {
     "name": "조연정",
     "position": "디자인, 기획",
     "email": "misodul0826@naver.com",
-    "image": "images/authorImage/joyeonjeong.png"
+    "image": "images/authorImage/joyeonjeong.webp"
   },
   {
     "name": "조태현",
     "position": "기획",
     "email": "hadasjk33@naver.com",
-    "image": "images/authorImage/joteaheun.png"
+    "image": "images/authorImage/joteaheun.webp"
   },
   {
     "name": "채승룡",
     "position": "기획, 디자인",
     "email": "csy1669@naver.com",
-    "image": "images/authorImage/chae-seung-rong.png"
+    "image": "images/authorImage/chae-seung-rong.webp"
   },
   {
     "name": "최동훈",
     "position": "발표",
     "email": "",
-    "image": "images/authorImage/choidonghun.png"
+    "image": "images/authorImage/choidonghun.webp"
   },
   {
     "name": "최수영",
     "position": "개발, 기획",
     "email": "csy010921@naver.com",
-    "image": "images/authorImage/choisuyeong.png"
+    "image": "images/authorImage/choisuyeong.webp"
   },
   {
     "name": "하성용",
     "position": "개발",
     "email": "gktjddyd9429@naver.com",
-    "image": "images/authorImage/haseongyong.png"
+    "image": "images/authorImage/haseongyong.webp"
   },
   {
     "name": "한석휘",
     "position": "백엔드 개발",
     "email": "ka1679@soongsil.ac.kr",
-    "image": "images/authorImage/hansukhwi.png"
+    "image": "images/authorImage/hansukhwi.webp"
   },
   {
     "name": "황애라",
     "position": "PM, 부스 기획, 게임 UXUI 디자인",
     "email": "aera815@naver.com",
-    "image": "images/authorImage/hwangaera.png"
+    "image": "images/authorImage/hwangaera.webp"
   },
   {
     "name": "황준걸",
     "position": "기획",
     "email": "dali2728@gmail.com",
-    "image": "images/authorImage/hwangjungger.png"
+    "image": "images/authorImage/hwangjungger.webp"
+  },
+  {
+    "name":"홍수찬",
+    "position":"아트, 기획",
+    "email":"winterfor001@gmail.com",
+    "image": "images/authorImage/hongsuchan.webp"
   }
 ]
 

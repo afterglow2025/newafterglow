@@ -331,6 +331,11 @@ header {
         font-weight: 100 !important;
         margin-bottom: 10px !important;
     }
+    .game-lineup h5 {
+        font-size: 0.9rem !important;
+        font-weight: 100 !important;
+        margin-bottom: 10px !important;
+    }
     .game-visual-text p {
         font-size: 0.9rem !important;
         font-weight: 300 !important;
@@ -349,6 +354,11 @@ header {
         max-width: 240px !important;
         font-size: 0.9rem !important;
         font-weight: 300 !important;
+    }
+    .service-lineup h5 {
+        font-size: 0.9rem !important;
+        font-weight: 100 !important;
+        margin-bottom: 10px !important;
     }
     .catalog-page {
         display: none;
@@ -555,12 +565,30 @@ footer {
     margin-bottom: 50px;
 }
 
+.game-lineup h5 {
+    font-size: 1rem !important;
+    font-weight: 100 !important;
+    margin-bottom: 10px !important;
+}
+
 .game-lineup h2 {
     font-family: 'Freesentation', sans-serif;
     font-size: 1.8rem;
     font-weight: 700;
     color: #fff;
     letter-spacing: 0.02em;
+}
+
+.mediaart-lineup h5 {
+    font-size: 1rem !important;
+    font-weight: 100 !important;
+    margin-bottom: 10px !important;
+}
+
+.service-lineup h5 {
+    font-size: 1rem !important;
+    font-weight: 100 !important;
+    margin-bottom: 10px !important;
 }
 
 @media (max-width: 900px) {
@@ -615,6 +643,11 @@ footer {
     }
     .game-lineup, .mediaart-lineup, .service-lineup {
         margin-bottom: 50px;
+    }
+    .mediaart-lineup h5 {
+        font-size: 0.9rem !important;
+        font-weight: 100 !important;
+        margin-bottom: 10px !important;
     }
 }
 

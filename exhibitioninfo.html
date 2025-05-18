@@ -9,8 +9,9 @@
     <style>
         .visit-title {
             text-align: center;
-            font-size: 3rem;
-            font-family: 'Noto Serif KR', serif;
+            font-size: 4rem;
+            font-weight: 500;
+            font-family: 'Freesentation', sans-serif;
             margin-top: 150px;
             margin-bottom: 32px;
             letter-spacing: 0.1em;
@@ -19,6 +20,7 @@
             max-width: 900px;
             margin: 100px auto 24px auto;
             font-size: 1.1rem;
+            font-family: 'Freesentation', sans-serif;
         }
         .visit-info-row {
             display: flex;
@@ -26,9 +28,11 @@
             align-items: flex-end;
             flex-wrap: wrap;
             margin-bottom: 16px;
+            font-family: 'Freesentation', sans-serif;
         }
         .visit-info-label {
             font-weight: bold;
+            font-family: 'Freesentation', sans-serif;
         }
         #map {
             width: 100%;
@@ -44,6 +48,7 @@
             max-width: 900px;
             margin: 0 auto 0 auto;
             padding: 0 0 40px 0;
+            font-family: 'Freesentation', sans-serif;
         }
         .parking-info-row {
             display: flex;
@@ -51,9 +56,11 @@
             align-items: flex-end;
             flex-wrap: wrap;
             margin-bottom: 16px;
+            font-family: 'Freesentation', sans-serif;
         }
         .parking-info-label {
             font-weight: bold;
+            font-family: 'Freesentation', sans-serif;
         }
         .parking-map-box {
             width: 100%;
@@ -73,23 +80,53 @@
             font-weight: bold;
             font-size: 1.2rem;
             margin: 40px 0 12px 0;
+            font-family: 'Freesentation', sans-serif;
         }
         .parking-guide-list {
             font-size: 1rem;
             margin: 0 0 0 0;
             padding-left: 0;
+            font-family: 'Freesentation', sans-serif;
         }
         .parking-guide-list li {
             margin-bottom: 4px;
             list-style: none;
+            font-family: 'Freesentation', sans-serif;
         }
         @media (max-width: 600px) {
             .visit-title { font-size: 2rem; }
             #map { height: 270px; margin-bottom: 60px; }
             .visit-info { font-size: 1rem; }
-            .visit-info-row { flex-direction: column; align-items: flex-start; }
+            .visit-info-time { margin-left: 15px; }
+            .visit-info-row { flex-direction: column; align-items: flex-start; margin-left: 15px; }
+            .parking-info-row { flex-direction: column; align-items: flex-start; margin-left: 15px; }
             .parking-map-box { height: 270px; font-size: 1.1rem; }
             .parking-info { font-size: 0.95rem; }
+            .parking-guide-title { margin-left: 15px; }
+            .parking-guide-list li {
+            margin: 0 15px !important;
+        }
+            .sponsor-section > div:first-child {
+                gap: 40px !important;
+            }
+            .sponsor-section img[alt="주최"],
+            .sponsor-section img[alt="주관"] {
+                height: 60px !important; /* 80px의 60% */
+            }
+            .sponsor-section img[alt="sponsor"] {
+                width: 100%;
+                height: auto;
+                max-width: 100vw;
+                padding: 0 20px;
+                box-sizing: border-box;
+                object-fit: contain;
+            }
+        }
+        .sponsor-section {
+            font-family: 'Freesentation', sans-serif;
+        }
+        .sponsor-section > div:first-child > div > div {
+            font-family: 'Freesentation', sans-serif;
         }
     </style>
 </head>
@@ -121,10 +158,10 @@
     <main>
         <div class="visit-title">VISIT</div>
         <div class="visit-info">
-            <div style="margin-bottom:12px;">관람시간: 10:00 - 17:00</div>
+            <div class="visit-info-time">관람시간: 10:00 - 17:00</div>
             <div class="visit-info-row">
                 <div><span class="visit-info-label">전시장 위치: 마루아트센터</span></div>
-                <div>서울 종로구 인사동길 35-6 마루아트센터, 신관 B1, 특별관</div>
+                <div>서울 종로구 인사동길 35-6 마루아트센터 B1, 특별관</div>
             </div>
         </div>
         <div id="map"></div>
@@ -132,7 +169,7 @@
     <div class="parking-info">
         <div class="parking-info-row">
             <div><span class="parking-info-label">주차장 위치: 센트로폴리스빌딩 주차장</span></div>
-            <div>서울 종로구 우정국로 26</div>
+            <div>서울 종로구 공평동 34-2</div>
         </div>
         <div class="parking-map-box" id="parking-map"></div>
         <div class="parking-guide-title">주차권 안내</div>
@@ -156,9 +193,9 @@
                 <img src="images/sswlogo.webp" alt="주관" style="height:80px;">
             </div>
         </div>
-        <div style="font-size:1.3rem; margin-bottom:40px;">SPONSOR</div>
+        <div style="font-size:1.3rem; margin-bottom:20px;">SPONSOR</div>
         <div style="display:flex; justify-content:center; align-items:center; gap:60px; flex-wrap:wrap; margin-bottom:100px;">
-            <img src="images/sponsor.webp" alt="sponsor" style="height:60px;">
+            <img src="images/sponsor.webp" alt="sponsor" style="height:60px; width:auto; max-width:100%;">
         </div>
     </div>
     <script>
@@ -208,16 +245,16 @@
       var parkingMapContainer = document.getElementById('parking-map');
       if (parkingMapContainer) {
         var parkingMapOption = {
-          center: new kakao.maps.LatLng(37.570377, 126.983021),
+          center: new kakao.maps.LatLng(37.57139767474511, 126.98455420252681),
           level: 3
         };
         var parkingMap = new kakao.maps.Map(parkingMapContainer, parkingMapOption);
         var parkingMarker = new kakao.maps.Marker({
-          position: new kakao.maps.LatLng(37.570377, 126.983021),
+          position: new kakao.maps.LatLng(37.57139767474511, 126.98455420252681),
           map: parkingMap
         });
         var parkingInfowindow = new kakao.maps.InfoWindow({
-          content: '<div style="padding:5px;">센트로폴리스빌딩 주차장</div>'
+          content: '<div style="padding:5px;">센트로폴리스빌딩</div>'
         });
         parkingInfowindow.open(parkingMap, parkingMarker);
       }

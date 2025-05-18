@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>웹도록 | CATALOG</title>
+    <title>afg.afterglow</title>
     <link rel="icon" type="image/webp" href="images/favicon.webp">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/catalog.css">
@@ -95,9 +95,51 @@
         .catalog-btn:active {
             background: #444;
         }
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            z-index: 1000;
+            cursor: pointer;
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+        }
+        @media (max-width: 700px) {
+            .overlay {
+                display: flex;
+            }
+        }
+        .overlay-title {
+            color: white;
+            font-size: 2rem;
+            font-weight: 500;
+            text-align: center;
+        }
+        .overlay-content {
+            color: white;
+            font-size: 1rem;
+            font-weight: 300;
+            text-align: center;
+            line-height: 1.8;
+        }
     </style>
 </head>
 <body>
+    <div class="overlay" id="overlay">
+        <div class="overlay-title">e-Book 시청 방법</div>
+        <div class="overlay-content">
+            1. 사진 왼쪽을 누르면 이전 페이지로 갑니다.<br>
+            2. 사진 오른쪽을 누르면 다음 페이지로 갑니다.<br>
+            3. 사진 아래에는 책갈피가 있습니다.
+        </div>
+        <div class="overlay-content">확인</div>
+    </div>
     <header>
         <div class="logo">
             <a href="index.html"><img src="images/logo_white.webp" alt="AFG Logo"></a>
@@ -118,7 +160,7 @@
             <a href="servicepage.html" class="bold-divider">SERVICE</a>
             <a href="authorpage.html">작가</a>
             <a href="curatorpage.html" class="bold-divider">큐레이터</a>
-            <a href="exhibitioninfo.html" class="bold-divider">전시 정보</a>
+            <a href="exhibitioninfo.html" class="bold-divider">전시 안내</a>
             <a href="catalog.html">카탈로그</a>
         </nav>
     </div>
@@ -141,6 +183,12 @@
     </main>
     <script>
     document.addEventListener('DOMContentLoaded', function() {
+        // 오버레이 클릭 시 사라지는 기능
+        const overlay = document.getElementById('overlay');
+        overlay.addEventListener('click', function() {
+            overlay.style.display = 'none';
+        });
+
         function handlePage1ClickOrTouch(x) {
             if (!isMobile()) return;
             const half = document.getElementById('page1').getBoundingClientRect().width / 2;
@@ -158,13 +206,13 @@
         // 마우스 클릭
         page1.onclick = function(e) {
             if (touchFired) {
-                touchFired = false; // 터치 후 발생한 클릭은 무시
+                touchFired = false; // 터치가 발생했다면 무시
                 return;
             }
             const rect = this.getBoundingClientRect();
             handlePage1ClickOrTouch(e.clientX - rect.left);
         };
-        // 터치(모바일) 지원
+        // 터치(모바일) 이벤트
         page1.addEventListener('touchend', function(e) {
             touchFired = true;
             e.preventDefault();
@@ -177,7 +225,7 @@
     const TOTAL_PAGES = 130;
     let currentPage = 1;
 
-    // 햄버거 메뉴 관련 요소
+    // 햄버거 메뉴 이벤트 설정
     const hamburgerBtn = document.getElementById('hamburgerBtn');
     const menuOverlay = document.getElementById('menuOverlay');
     const menuBg = document.getElementById('menuBg');
@@ -201,7 +249,7 @@
         menuBg.classList.remove('active');
     });
 
-    // 모바일 여부
+    // 모바일 체크
     function isMobile() {
         return window.innerWidth < 700;
     }
@@ -213,7 +261,7 @@
         let left = currentPage;
         let right = currentPage + 1;
 
-        // 모든 .catalog-page에서 active 제거
+        // 모든 .catalog-page에 active 클래스 제거
         page1Div.classList.remove('active');
         page2Div.classList.remove('active');
 
@@ -265,12 +313,12 @@
     }
     document.getElementById('prevBtn').onclick = goPrev;
     document.getElementById('nextBtn').onclick = goNext;
-    // 책갈피 버튼 이벤트 리스너 추가
+    // 책갈피 버튼 이벤트 리스트 추가
     document.querySelectorAll('.bookmark-btn').forEach(btn => {
         btn.onclick = () => goToPage(parseInt(btn.dataset.page));
     });
     window.addEventListener('resize', updateCatalog);
-    // 첫 페이지 렌더링
+    // 처음 페이지 로드시 카탈로그 업데이트
     updateCatalog();
 
     let touchStartX = 0;
@@ -294,7 +342,6 @@
             if (currentPage > 1) goPrev();
         }
     }
-
     </script>
 </body>
 </html> 

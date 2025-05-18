@@ -39,12 +39,12 @@
             <div class="laptop-inner">
                 <div class="game-slide-slider">
                     <div class="game-slide-track">
-                        <div class="game-slide"><img src="images/mediaart_1.webp" alt="mediaart1"></div>
-                        <div class="game-slide"><img src="images/mediaart_2.webp" alt="mediaart2"></div>
-                        <div class="game-slide"><img src="images/mediaart_3.webp" alt="mediaart3"></div>
-                        <div class="game-slide"><img src="images/mediaart_4.webp" alt="mediaart4"></div>
-                        <div class="game-slide"><img src="images/mediaart_5.webp" alt="mediaart5"></div>
-                        <div class="game-slide"><img src="images/mediaart_6.webp" alt="mediaart6"></div>
+                        <div class="game-slide" data-game="동심"><img src="images/mediaart_1.webp" alt="mediaart1"></div>
+                        <div class="game-slide" data-game="등대"><img src="images/mediaart_2.webp" alt="mediaart2"></div>
+                        <div class="game-slide" data-game="벌꿀오소리"><img src="images/mediaart_3.webp" alt="mediaart3"></div>
+                        <div class="game-slide" data-game="연'3'이"><img src="images/mediaart_4.webp" alt="mediaart4"></div>
+                        <div class="game-slide" data-game="Handmade"><img src="images/mediaart_5.webp" alt="mediaart5"></div>
+                        <div class="game-slide" data-game="Ink"><img src="images/mediaart_6.webp" alt="mediaart6"></div>
                     </div>
                     <div class="game-slide-indicators">
                         <div class="game-slide-indicator active"></div>
@@ -62,48 +62,49 @@
                 </div>
                 <div class="mediaart-lineup">
                     <h2>Line Up</h2>
+                    <h5>이미지를 클릭하면, 개인페이지로 넘어갑니다</h5>
                 </div>
                 <div class="game-grid">
                     <div class="game-thumb">
-                        <a href="https://www.naver.com/">
+                        <a href="https://dongsim-afterglow.github.io/">
                             <img src="images/mediaart1.webp" alt="mediaart1">
                             <img src="images/profil/mediaart1.webp" alt="mediaart1-hover" class="hover-img">
-                            <div class="game-thumb-label"><span>mediaart1</span><br><span>팀1</span></div>
+                            <div class="game-thumb-label"><span>동심</span><br><span>정지원 박승민 채승룡</span></div>
                         </a>
                     </div>
                     <div class="game-thumb">
-                        <a href="https://www.naver.com/">
+                        <a href="https://ssu-lighthouse.github.io/">
                             <img src="images/mediaart2.webp" alt="mediaart2">
                             <img src="images/profil/mediaart2.webp" alt="mediaart2-hover" class="hover-img">
-                            <div class="game-thumb-label"><span>mediaart2</span><br><span>팀2</span></div>
+                            <div class="game-thumb-label"><span>등대</span><br><span>김민지 문혜정 서나진</span></div>
                         </a>
                     </div>
                     <div class="game-thumb">
-                        <a href="https://www.naver.com/">
+                        <a href="https://honey-badger.kr">
                             <img src="images/mediaart3.webp" alt="mediaart3">
                             <img src="images/profil/mediaart3.webp" alt="mediaart3-hover" class="hover-img">
-                            <div class="game-thumb-label"><span>mediaart3</span><br><span>팀3</span></div>
+                            <div class="game-thumb-label"><span>벌꿀오소리</span><br><span>황준걸 이혜연 임나영</span></div>
                         </a>
                     </div>
                     <div class="game-thumb">
-                        <a href="https://www.naver.com/">
+                        <a href="https://333-yeon.vercel.app">
                             <img src="images/mediaart4.webp" alt="mediaart4">
                             <img src="images/profil/mediaart4.webp" alt="mediaart4-hover" class="hover-img">
-                            <div class="game-thumb-label"><span>mediaart4</span><br><span>팀4</span></div>
+                            <div class="game-thumb-label"><span>연'3'이</span><br><span>신수연 김하연 이연재</span></div>
                         </a>
                     </div>
                     <div class="game-thumb">
-                        <a href="https://www.naver.com/">
+                        <a href="https://team-handmade.github.io/">
                             <img src="images/mediaart5.webp" alt="mediaart5">
                             <img src="images/profil/mediaart5.webp" alt="mediaart5-hover" class="hover-img">
-                            <div class="game-thumb-label"><span>mediaart5</span><br><span>팀5</span></div>
+                            <div class="game-thumb-label"><span>Handmade</span><br><span>정태영 신정민 이세진</span></div>
                         </a>
                     </div>
                     <div class="game-thumb">
-                        <a href="https://www.naver.com/">
+                        <a href="https://soo0choi.github.io/Ink.github.io/">
                             <img src="images/mediaart6.webp" alt="mediaart6">
                             <img src="images/profil/mediaart6.webp" alt="mediaart6-hover" class="hover-img">
-                            <div class="game-thumb-label"><span>mediaart6</span><br><span>팀6</span></div>
+                            <div class="game-thumb-label"><span>Ink</span><br><span>최수영 곽윤희 조연정</span></div>
                         </a>
                     </div>
                 </div>
@@ -150,6 +151,17 @@
                     }
                 });
             }
+        });
+
+        // 슬라이드 클릭 이벤트 추가
+        document.querySelectorAll('.game-slide').forEach(slide => {
+            slide.addEventListener('click', function() {
+                const gameName = this.getAttribute('data-game');
+                const targetThumb = Array.from(document.querySelectorAll('.game-thumb-label span:first-child')).find(span => span.textContent.trim() === gameName)?.closest('.game-thumb');
+                if (targetThumb) {
+                    targetThumb.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
         });
     </script>
 </body>
