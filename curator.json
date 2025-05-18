@@ -1,8 +1,8 @@
 [
   {
     "name": "이경모",
-    "position": "Project Leader",
-    "email": "이메일뭐임?",
+    "position": "팀장",
+    "email": "이메일",
     "image": "images/curatorImage/mo.png"
   },
   {
@@ -13,19 +13,19 @@
   },
   {
     "name": "김한슬",
-    "position": "Art Derector",
+    "position": "아트",
     "email": "이메일",
     "image": "images/curatorImage/han.png"
   },
   {
     "name": "명은서",
-    "position": "Marketing",
+    "position": "AD",
     "email": "이메일",
     "image": "images/curatorImage/eunn.png"
   },
   {
     "name": "김현서",
-    "position": "Film Derector",
+    "position": "AD",
     "email": "이메일",
     "image": "images/curatorImage/heaun.png"
   },
